@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting To Know Each Other Teams</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <header>
+        <img src="fyre.gif" width="90">
+        <h1>Fat Doinks</h1>
+        <img src="fyre.gif" width="90">
+    </header>
+    <div class="member-list">
+        <div class="member">
+            <img src="slow.jpeg">
+            <p>hi</p>
+        </div>
+        <div class="member">
+            <img src="slow.jpeg">
+            <p>hi</p>
+        </div>
+        <div class="member">
+            <img src="slow.jpeg">
+            <p>hi</p>
+        </div>
+        <div class="member">
+            <img src="slow.jpeg">
+            <p>hi</p>
+        </div>
+    </div>
+
+    <h2>Assignment Portfolio</h2>
+    <section id="completed" class="dropdown">
+        <h2>Completed Projects</h2>
+        <div class="project-container">
+            <div class="project" style="background-image: url('dummy.png');">
+                <h3>test proj1</h3>
+            </div>
+            <div class="project" style="background-image: url('dummy.png');">
+                <h3>test proj2</h3>
+            </div>
+        </div>
+    </section>
+    <section id="in-prog" class="dropdown">
+        <h2>In Progress</h2>
+        <div class="project-container">
+            <p>testempty</p>
+        </div>
+    </section>
+    <section id="future" class="dropdown">
+        <h2>Future</h2>
+        <div class="project-container">
+            <p>testempty2</p>
+        </div>
+    </section>
+
+    <script>
+        const dropdowns = document.querySelectorAll('.dropdown h2');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function() {
+                this.nextElementSibling.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

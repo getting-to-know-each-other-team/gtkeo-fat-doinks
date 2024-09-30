@@ -1,0 +1,90 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #666699;
+}
+
+header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #9d77c4;
+}
+
+.member-list {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+    gap: 40px;
+}
+
+.member {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.member img {
+    max-width: 300px;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+section {
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.project-container {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-container.active {
+    display: grid;
+}
+
+.project {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color:aqua;
+    transition: transform 0.3, box-shadow 0.3;
+}
+
+.project h3{
+    z-index: 1;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: blue;
+    z-index: 0;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
