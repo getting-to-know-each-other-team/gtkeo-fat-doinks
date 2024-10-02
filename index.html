@@ -16,6 +16,12 @@
         <div class="member">
             <img src="garden_of_gods_selfie_resized.png">
             <p>Matthew Shouse</p>
+            <div class="member-details">
+                <h3>Contact Info</h3>
+                <p>Email: email</p>
+                <p>Discord: discord</p>
+                <p>GitHub: github</p>
+            </div>
         </div>
         <!--DELETE THIS ONCE COMPLETED
         Add a picture of yourself to this folder and make sure it is sized properly
@@ -24,15 +30,33 @@
         and change the text in the <p> tags to your name-->
         <div class="member">
             <img src="JYFace.jpg">
-            <p>hi</p>
+            <p>Jason Yescas</p>
+            <div class="member-details">
+                <h3>Contact Info</h3>
+                <p>Email: email</p>
+                <p>Discord: discord</p>
+                <p>GitHub: github</p>
+            </div>
         </div>
         <div class="member">
-            <img src="slow.jpeg">
-            <p>hi</p>
+            <img src="dummy.png">
+            <p>Member 3</p>
+            <div class="member-details">
+                <h3>Contact Info</h3>
+                <p>Email: email</p>
+                <p>Discord: discord</p>
+                <p>GitHub: github</p>
+            </div>
         </div>
         <div class="member">
-            <img src="slow.jpeg">
-            <p>hi</p>
+            <img src="dummy.png">
+            <p>Member 4</p>
+            <div class="member-details">
+                <h3>Contact Info</h3>
+                <p>Email: email</p>
+                <p>Discord: discord</p>
+                <p>GitHub: github</p>
+            </div>
         </div>
     </div>
 
@@ -41,23 +65,23 @@
         <h2>Completed Projects</h2>
         <div class="project-container">
             <div class="project" style="background-image: url('dummy.png');">
-                <h3>test proj1</h3>
+                <h3>TEST 1</h3>
             </div>
             <div class="project" style="background-image: url('dummy.png');">
-                <h3>test proj2</h3>
+                <h3>TEST 2</h3>
             </div>
         </div>
     </section>
     <section id="in-prog" class="dropdown">
         <h2>In Progress</h2>
         <div class="project-container">
-            <p>testempty</p>
+            <p>Check Later</p>
         </div>
     </section>
     <section id="future" class="dropdown">
         <h2>Future</h2>
         <div class="project-container">
-            <p>testempty2</p>
+            <p>Check Later</p>
         </div>
     </section>
 
@@ -65,6 +89,13 @@
         const dropdowns = document.querySelectorAll('.dropdown h2');
         dropdowns.forEach(dropdown => {
             dropdown.addEventListener('click', function() {
+                this.nextElementSibling.classList.toggle('active');
+            });
+        });
+
+        const members = document.querySelectorAll('.member p');
+        members.forEach(member => {
+            member.addEventListener('click', function() {
                 this.nextElementSibling.classList.toggle('active');
             });
         });
