@@ -1,4 +1,3 @@
-
 /* -ALL THROUGHOUT PAGE- */
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -8,29 +7,25 @@ body {
     padding: 0; /*Reset Padding*/
 }
 
-
 /* -ONLY HEADER STYLE- */
 header {
     text-align: center;
     display: flex;
     justify-content: center;
     background-color: #9d77c4; /*Header Background Color*/
-    padding: 20px; /*Padding to all sides of Header*/
+    padding: 15px 0; /*Padding to all sides of Header*/
     color: white; /*Header Text Color (Overrides Default Text Color)*/
     font-size: 1rem; /*Header Font Size = 16px or 1rem*/
 }
 
-
 /* -ONLY MEMBERS LIST, MEMBER BOXES, MEMBER DETAILS STYLE- */
-
 /*Members List holds Member boxes, it formats how they show up side by side.*/
 .member-list {
     display: flex;
     flex-wrap: wrap; /*Makes Member Boxes wrap below when screen size is smaller*/
-    margin: 20px;
-    padding: 10px;
+    padding: 20px;
     justify-content: center; /*Centers all Member Boxes*/
-    gap: 40px; /*Adds space between Member Boxes*/
+    gap: 30px; /*Adds space between Member Boxes*/
     align-items: flex-start; /*Align Member Boxes independently (Necessary for dropdown)*/
 }
 
@@ -93,46 +88,22 @@ header {
     max-height: 300px; /*Expand details*/
 }
 
-/*This part is to account for smaller screens (WIP)*/
-@media (max-width: 768px) {
-    .member {
-        width: 100%; /*Full width on smaller screens*/
-    }
-    .member img {
-        max-height: 250px; /*Maintain max height for images*/
-    }
-}
-
-
 /* -ONLY ASSIGNMENT PORTFOLIO STYLE- */
-/*Section is all 3 parts of the portfolio*/
-/*(I might change this to be just a grid layout without any dropdowns,
-website looks kind of empty with it being like this)*/
-section {
-    margin: 20px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 8px;
+h2 {
+    text-align: center;
+    background-color: #9d77c4;
+    color:#f0f0f0;
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
 }
 
-/*This is the text for each of the categories, and what is used to make the dropdowns work*/
-section h2 {
-    margin-bottom: 15px;
-    cursor: pointer; /*Users cursor changes when hovering over h2 text*/
-    padding: 10px;
-}
-
-/*This is the formatting for the projects within the dropboxes*/
 .project-container {
-    display: none; /*Hidden by default*/
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*Responsive grid*/
     gap: 20px;
-    margin-top: 20px;
-}
-
-/*Show project-container when dropdown is activated*/
-.project-container.active {
-    display: grid;
+    padding: 20px;
 }
 
 /*Styling for each project box*/
@@ -141,20 +112,20 @@ section h2 {
     background-position: center; /*Centers each background image*/
     height: 200px; /*Fixed height for project containers*/
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center; /*Center project container text*/
     position: relative;
     overflow: hidden; /*Hides overflow content*/
     color:aqua; /*Text color for project containers (TEMPORARY)*/
     transition: transform 0.3s, box-shadow 0.3s; /*Hover effects*/
+    cursor: pointer;
 }
 
 /*Styling for project container title text*/
 .project h3{
-    z-index: 1; /*Ensure text appears above the background image*/
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2; /*Ensure text appears above the background image*/
     font-size: 1.5em;
-    text-align: center;
 }
 
 /*Overlays on project container background image*/
@@ -166,12 +137,10 @@ section h2 {
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,255,0.5); /*Semi-transparent blue overlay*/
-    z-index: 0; /*Overlay behind text*/
+    z-index: 1; /*Overlay behind text*/
 }
 
 /*Hover effects for projects*/
 .project:hover {
     transform: scale(1.05); /*Slightly enlarge project container upon hovering*/
 }
-
-/*Relish - 10.2.2024 @ 12:34 AM

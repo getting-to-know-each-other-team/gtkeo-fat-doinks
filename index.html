@@ -23,19 +23,14 @@
                 <p>GitHub: mshouse8624</p>
             </div>
         </div>
-        <!--DELETE THIS ONCE COMPLETED
-        Add a picture of yourself to this folder and make sure it is sized properly
-        (you can use the one from the previous "getting to know each other" or another)
-        change the img scr="slow.jpeg" attribute to the name of the picture you added
-        and change the text in the <p> tags to your name-->
         <div class="member">
             <img src="JYFace.jpg">
             <p>Jason Yescas</p>
             <div class="member-details">
                 <h3>Contact Info</h3>
-                <p>Email: email</p>
-                <p>Discord: discord</p>
-                <p>GitHub: github</p>
+                <p>Email: jasonyescas@lewisu.edu</p>
+                <p>Discord: relishandorangejuice</p>
+                <p>GitHub: jayes5089</p>
             </div>
         </div>
         <div class="member">
@@ -61,38 +56,19 @@
     </div>
 
     <h2>Assignment Portfolio</h2>
-    <section id="completed" class="dropdown">
-        <h2>Completed Projects</h2>
-        <div class="project-container">
-            <div class="project" style="background-image: url('dummy.png');">
-                <h3>TEST 1</h3>
-            </div>
-            <div class="project" style="background-image: url('dummy.png');">
-                <h3>TEST 2</h3>
-            </div>
+    <div class="project-container">
+        <div class="project" style="background-image: url('dummy.png');">
+            <h3>Test Project 1</h3>
         </div>
-    </section>
-    <section id="in-prog" class="dropdown">
-        <h2>In Progress</h2>
-        <div class="project-container">
-            <p>Check Later</p>
+        <div class="project" style="background-image: url('dummy.png');">
+            <h3>Test Project 2</h3>
         </div>
-    </section>
-    <section id="future" class="dropdown">
-        <h2>Future</h2>
-        <div class="project-container">
-            <p>Check Later</p>
+        <div class="project" style="background-image: url('dummy.png');">
+            <h3>Test Project 3</h3>
         </div>
-    </section>
+    </div>
 
     <script>
-        const dropdowns = document.querySelectorAll('.dropdown h2');
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function() {
-                this.nextElementSibling.classList.toggle('active');
-            });
-        });
-
         const members = document.querySelectorAll('.member p');
         members.forEach(member => {
             member.addEventListener('click', function() {
