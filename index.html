@@ -14,7 +14,9 @@
     </header>
     <div class="member-list">
         <div class="member">
-            <img src="garden_of_gods_selfie_resized.png">
+            <a href="https://mshouse8624.github.io/getting-to-know-each-other2/" target="_blank">
+                <img src="garden_of_gods_selfie_resized.png">
+            </a>
             <p>Matthew Shouse</p>
             <div class="member-details">
                 <h3>Contact Info</h3>
@@ -24,7 +26,9 @@
             </div>
         </div>
         <div class="member">
-            <img src="JYFace.jpg">
+            <a href="https://jayes5089.github.io/getting-to-know-each-other-jy2024/" target="_blank">
+                <img src="JYFace.jpg">
+            </a>
             <p>Jason Yescas</p>
             <div class="member-details">
                 <h3>Contact Info</h3>
@@ -34,7 +38,9 @@
             </div>
         </div>
         <div class="member">
-            <img src="GNFace.jpg">
+            <a href="https://nikign-07.github.io/me/" target="_blank">
+                <img src="GNFace.jpg">
+            </a>
             <p>Nikhila Gonuguntla</p>
             <div class="member-details">
                 <h3>Contact Info</h3>
@@ -44,7 +50,9 @@
             </div>
         </div>
         <div class="member">
-            <img src="JBface.jpg">
+            <a href="https://jobuboju.github.io/Getting-to-know-each-other2/" target="_blank">
+                <img src="JBface.jpg">
+            </a>
             <p>Joshua Butny</p>
             <div class="member-details">
                 <h3>Contact Info</h3>
@@ -72,6 +80,7 @@
         const members = document.querySelectorAll('.member p');
         members.forEach(member => {
             member.addEventListener('click', function() {
+                this.classList.toggle('active');
                 this.nextElementSibling.classList.toggle('active');
             });
         });
